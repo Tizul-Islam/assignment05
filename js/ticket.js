@@ -12,7 +12,7 @@ for (const keyloop of keybord) {
 
     // condition
 
-    if (checkItemNum <= 3 && ! keyloop.disabled) {
+    if (checkItemNum <= 3 && !keyloop.disabled) {
       const seatNumber = keyloop.innerText;
 
       const bgMake = keyloop.classList.add("bg-green-500");
@@ -44,12 +44,6 @@ for (const keyloop of keybord) {
       const p = document.createElement("div");
 
       p.innerText = `${seatNumber}    Economoy    550`;
-
-      // p.innerText = `<div class="flex justify-between">
-      // <p> ${seatNumber} </p>
-      // <p> Econimic </p>
-      // <p> 550 </p>
-      // <div>;`
 
       showPlace.appendChild(p);
 
@@ -123,7 +117,8 @@ for (const keyloop of keybord) {
             const inputDiv = document.getElementById("inputDiv");
 
             inputDiv.classList.add("hidden");
-          } else if (couponCode === "Couple 20") {
+            } 
+            else if (couponCode === "Couple 20") {
             const price = tp.innerText;
 
             const priceNum = parseFloat(price);
@@ -177,6 +172,8 @@ for (const keyloop of keybord) {
 
           //  input clear
           document.getElementById("couponInput").value = "";
+
+        
         });
       }
 
@@ -192,9 +189,18 @@ for (const keyloop of keybord) {
 
           eleModal.removeAttribute("disabled", "false");
         }
+
+        else if (checkItemNum >= 3) {
+          alert("You can purchase maximum 4 tickets at once.");
+      }
       });
+     
+    
     }
 
     keyloop.disabled = true;
   });
+
+
+
 }
