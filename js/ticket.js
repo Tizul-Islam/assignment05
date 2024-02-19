@@ -117,8 +117,7 @@ for (const keyloop of keybord) {
             const inputDiv = document.getElementById("inputDiv");
 
             inputDiv.classList.add("hidden");
-            } 
-            else if (couponCode === "Couple 20") {
+          } else if (couponCode === "Couple 20") {
             const price = tp.innerText;
 
             const priceNum = parseFloat(price);
@@ -174,6 +173,7 @@ for (const keyloop of keybord) {
           document.getElementById("couponInput").value = "";
 
         
+
         });
       }
 
@@ -188,19 +188,10 @@ for (const keyloop of keybord) {
           const eleModal = document.getElementById("modalButton");
 
           eleModal.removeAttribute("disabled", "false");
-        }
-
-        else if (checkItemNum >= 3) {
-          alert("You can purchase maximum 4 tickets at once.");
-      }
+        } 
       });
-     
-    
     }
 
     keyloop.disabled = true;
   });
-
-
-
 }
